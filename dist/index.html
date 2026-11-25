@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru" class="js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#d8e5f1">
+  <meta name="description" content="Свадебное приглашение Бекзата и Алины">
+  <title>Бекзат & Алина — свадебное приглашение</title>
+  <link rel="preload" href="assets/images/orangery-hero.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-loading">
+  <div class="loader" id="siteLoader" role="status" aria-live="polite">
+    <span class="loader-gem"></span>
+    <p id="loaderText">Готовим приглашение</p>
+  </div>
+
+  <main class="invitation-shell" id="siteContent">
+    <section class="hero" id="hero" aria-label="Первый экран приглашения">
+      <img class="hero-image" src="assets/images/orangery-hero.webp" alt="Голубая дворцовая оранжерея и свадебная аллея">
+      <div class="hero-light"></div>
+      <div class="hero-copy">
+        <p class="hero-kicker" id="heroKicker">В этот прекрасный день</p>
+        <div class="hero-monogram"><span id="groomInitial">Б</span><i>❦</i><span id="brideInitial">А</span></div>
+        <h1><span id="heroGroom">Бекзат</span><em>&</em><span id="heroBride">Алина</span></h1>
+        <p class="hero-date" id="heroDate">12 · 06 · 2027</p>
+      </div>
+      <a class="scroll-cue" href="#invitation"><span id="scrollLabel">Листайте вниз</span><i></i></a>
+    </section>
+
+    <section class="invitation section-paper" id="invitation">
+      <img class="ornate-frame" src="assets/images/regency-frame.webp" alt="" aria-hidden="true" loading="lazy">
+      <div class="invitation-copy reveal">
+        <span class="section-number">I</span>
+        <h2 id="invitationTitle">Дорогие родные и друзья!</h2>
+        <div class="pearl-rule"><i></i><b>✦</b><i></i></div>
+        <p id="invitationText">Мы будем счастливы разделить с вами этот особенный день. Приглашаем вас стать частью нашего свадебного торжества!</p>
+        <p class="signature"><small id="signatureLabel">С любовью,</small><strong id="signatureNames">Бекзат & Алина</strong></p>
+      </div>
+    </section>
+
+    <section class="calendar-section section-mist" aria-labelledby="calendarHeading">
+      <div class="calendar-card reveal">
+        <span class="section-number">II</span>
+        <p class="eyebrow" id="saveDateLabel">Сохраните эту дату</p>
+        <h2 id="calendarHeading"><span id="calendarMonth">Июнь</span><small id="calendarYear">2027</small></h2>
+        <div class="calendar-grid" id="calendarGrid" role="grid" aria-label="Календарь"></div>
+        <p class="calendar-note" id="calendarNote">Суббота · начало в 16:30</p>
+      </div>
+    </section>
+
+    <section class="countdown-section section-paper" aria-labelledby="countdownHeading">
+      <div class="glass-dome reveal">
+        <p class="eyebrow" id="countdownEyebrow">До нашей свадьбы</p>
+        <h2 id="countdownHeading">Осталось совсем немного</h2>
+        <div class="countdown-grid">
+          <div><strong data-countdown-days>000</strong><small id="daysLabel">дней</small></div>
+          <div><strong data-countdown-hours>00</strong><small id="hoursLabel">часов</small></div>
+          <div><strong data-countdown-minutes>00</strong><small id="minutesLabel">минут</small></div>
+          <div><strong data-countdown-seconds>00</strong><small id="secondsLabel">секунд</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="venue-section section-mist" aria-labelledby="venueHeading">
+      <div class="venue-copy reveal">
+        <span class="section-number">III</span>
+        <p class="eyebrow" id="venueEyebrow">Место торжества</p>
+        <h2 id="venueHeading">Изумруд</h2>
+        <p class="venue-type" id="venueType">Банкетный зал</p>
+        <div class="pearl-rule"><i></i><b>⌖</b><i></i></div>
+        <p class="venue-address" id="venueAddress">г. Бишкек, ул. Чуй, 123</p>
+        <div class="venue-actions">
+          <a id="googleMapLink" href="#" target="_blank" rel="noopener">Google Maps</a>
+          <a id="twoGisLink" href="#" target="_blank" rel="noopener">2ГИС</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline-section section-paper" aria-labelledby="timelineHeading">
+      <div class="timeline-heading reveal">
+        <span class="section-number">IV</span>
+        <p class="eyebrow" id="timelineEyebrow">Садовая симфония</p>
+        <h2 id="timelineHeading">Программа дня</h2>
+      </div>
+      <ol class="timeline-list" id="timelineList"></ol>
+    </section>
+
+    <section class="wishes-section section-mist" id="wishesSection" aria-labelledby="wishesHeading">
+      <div class="wishes-card reveal">
+        <span class="section-number">V</span>
+        <p class="eyebrow" id="wishesEyebrow">Несколько слов от нас</p>
+        <h2 id="wishesHeading">Наши пожелания</h2>
+        <div class="pearl-rule"><i></i><b>❦</b><i></i></div>
+        <p id="wishesText">Самый ценный подарок для нас — ваше присутствие, улыбки и хорошее настроение!</p>
+      </div>
+    </section>
+
+    <section class="rsvp-section section-paper" aria-labelledby="rsvpHeading">
+      <form class="rsvp-form reveal" id="rsvpForm">
+        <span class="section-number">VI</span>
+        <p class="eyebrow" id="rsvpEyebrow">Будете ли вы с нами?</p>
+        <h2 id="rsvpHeading">Ответ гостя</h2>
+        <label><span id="nameLabel">Ваше имя</span><input id="guestName" name="name" autocomplete="name" required placeholder="Введите имя"></label>
+        <fieldset>
+          <legend id="attendanceLegend">Сможете присутствовать?</legend>
+          <label class="choice"><input type="radio" name="attendance" value="true" checked><span id="attendYes">С радостью приду</span></label>
+          <label class="choice"><input type="radio" name="attendance" value="false"><span id="attendNo">К сожалению, не смогу</span></label>
+        </fieldset>
+        <div class="guest-count-field" id="guestCountPicker">
+          <span id="guestCountLabel">Количество гостей</span>
+          <select class="guest-count-native" id="guestCount" name="count" tabindex="-1" aria-hidden="true"></select>
+          <button class="guest-count-trigger" id="guestCountButton" type="button" aria-haspopup="listbox" aria-expanded="false">
+            <span id="guestCountValue">1</span><i aria-hidden="true"></i>
+          </button>
+          <div class="guest-count-options" id="guestCountOptions" role="listbox" aria-label="Количество гостей"></div>
+        </div>
+        <label id="wishField"><span id="wishLabel">Пожелание молодожёнам</span><textarea id="guestWish" name="wish" rows="3" placeholder="Напишите несколько тёплых слов"></textarea></label>
+        <button class="submit-button" type="submit" id="submitButton">Отправить ответ</button>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <footer class="footer-section section-mist">
+      <p id="footerWaiting">С нетерпением ждём встречи!</p>
+      <p class="signature"><small id="footerLove">С любовью,</small><strong id="footerNames">Бекзат & Алина</strong></p>
+      <img class="fountain-vignette" src="assets/images/fountain-vignette.webp" alt="" aria-hidden="true" loading="lazy">
+    </footer>
+  </main>
+
+  <div class="language-menu" id="languageMenu" hidden>
+    <button id="languageToggle" type="button" aria-expanded="false"><span id="currentLanguage">RU</span></button>
+    <div id="languageOptions"></div>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>

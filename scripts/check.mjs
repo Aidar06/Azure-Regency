@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..','dist');
+for(const file of ['index.html','styles.css','app.js','assets/images/orangery-hero.webp','assets/images/regency-frame.webp','assets/images/fountain-vignette.webp','assets/fonts/great-vibes.woff2'])assert(fs.statSync(path.join(root,file)).size>100,`Missing ${file}`);
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8'),css=fs.readFileSync(path.join(root,'styles.css'),'utf8'),app=fs.readFileSync(path.join(root,'app.js'),'utf8');
+for(const marker of ['orangery-hero.webp','regency-frame.webp','calendarGrid','timelineList','rsvpForm','languageMenu'])assert(html.includes(marker),`Missing ${marker}`);
+for(const marker of ['preview-mode','100svh','prefers-reduced-motion','object-fit:cover','backdrop-filter'])assert(css.includes(marker),`Missing ${marker}`);
+for(const marker of ['api:X8-e2j1w/priglosi','previewMode',"enabled: ['ru','ky','kk']",'/rsvp','loadInvitation'])assert(app.includes(marker),`Missing ${marker}`);
+console.log('Passed: original assets, Xano loading, RU/KG/KZ, RSVP, preview and responsive layout.');
